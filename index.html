@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botica Luz - Tu salud es nuestra prioridad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --primary-light: #4caf50;
+            --primary-dark: #1b5e20;
+            --secondary: #ff9800;
+            --white: #ffffff;
+            --light-bg: #f9fafb;
+            --text: #333333;
+            --text-light: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s, background 0.3s;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        nav ul li a:hover {
+            color: var(--white);
+            background: var(--primary);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--primary-dark);
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(rgba(46, 125, 50, 0.75), rgba(27, 94, 32, 0.9)),
+            url('https://images.unsplash.com/photo-1585435557343-3c0b6e724c04?auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+            color: var(--white);
+            padding: 100px 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #f57c00;
+            transform: translateY(-3px);
+        }
+
+        /* SECTION TITLES */
+        section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2rem;
+            color: var(--primary);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: var(--secondary);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        /* ABOUT */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .about-image {
+            flex: 1;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image img:hover {
+            transform: scale(1.05);
+        }
+
+        /* SERVICES */
+        .services {
+            background-color: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 35px 25px;
+            text-align: center;
+            border-radius: 15px;
+            border-top: 5px solid var(--primary);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* PRODUCTS */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            height: 170px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f0f0;
+        }
+
+        .product-image img {
+            width: 80%;
+            height: auto;
+        }
+
+        .product-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-info h3 {
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-weight: 700;
+            color: var(--secondary);
+            margin-top: 5px;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: var(--white);
+        }
+
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-right: 15px;
+        }
+
+        .contact-details h3 {
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .map {
+            flex: 1;
+            border-radius: 15px;
+            background: #e9e9e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            background: var(--primary);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-dark);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--secondary);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            margin-top: 30px;
+            padding-top: 15px;
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background: var(--white);
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .mobile-menu {
+                display: block;
+                position: absolute;
+                right: 25px;
+                top: 18px;
+            }
+
+            .about-content, .contact-content {
+                flex-direction: column;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">💊</div>
+                    <div class="logo-text">Botica Luz</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu">☰</div>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>Tu salud es nuestra prioridad</h1>
+            <p>En Botica Luz, nos preocupamos por tu bienestar. Ofrecemos medicamentos, productos de cuidado personal y asesoramiento farmacéutico profesional.</p>
+            <a href="#contacto" class="btn">Contáctanos</a>
+        </div>
+    </section>
+
+    <section id="nosotros" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Somos una botica familiar con más de 20 años de servicio a la comunidad. Nuestro equipo de farmacéuticos altamente capacitados está comprometido con tu salud y bienestar.</p>
+                    <p>Ofrecemos una amplia gama de medicamentos, productos de cuidado personal y servicios farmacéuticos para satisfacer todas tus necesidades.</p>
+                    <p>Nos enorgullece brindar un trato cercano y personalizado, conociendo a nuestros clientes por su nombre y ofreciendo consejos profesionales.</p>
+                    <a href="#contacto" class="btn">Visítanos</a>
+                </div>
+                <div class="about-image">
+                    <img src="descarga.jpeg" alt="Botica Luz">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💊</div>
+                    <h3>Venta de Medicamentos</h3>
+                    <p>Amplio stock de medicamentos con y sin receta, siempre con asesoramiento profesional.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Asesoramiento Farmacéutico</h3>
+                    <p>Nuestros farmacéuticos te orientan sobre el uso correcto de medicamentos y cuidados de salud.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🩺</div>
+                    <h3>Control de Presión Arterial</h3>
+                    <p>Servicio gratuito para monitorear tu salud cardiovascular.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👥</div>
+                    <h3>Atención Personalizada</h3>
+                    <p>Te conocemos por tu nombre y entendemos tus necesidades de salud específicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="productos" class="products">
+        <div class="container">
+            <h2 class="section-title">Productos Destacados</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="alnalgesicos.webp" alt="Analgésicos">
+                    </div>
+                    <div class="product-info">
+                        <h3>Analgésicos</h3>
+                        <p>Para aliviar dolores y malestares</p>
+                        <div class="price">Desde S/5.00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="vitaminas.png" alt="Vitaminas">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vitaminas y Suplementos</h3>
+                        <p>Complementa tu nutrición</p>
+                        <div class="price">Desde S/8.50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="personal.jpeg" alt="Cuidado personal">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cuidado Personal</h3>
+                        <p>Jabones, cremas y más</p>
+                        <div class="price">Desde S/3.00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="auxilios.jpeg" alt="Primeros auxilios">
+                    </div>
+                    <div class="product-info">
+                        <h3>Primeros Auxilios</h3>
+                        <p>Material para emergencias</p>
+                        <div class="price">Desde S/12.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Dirección</h3>
+                            <p>Nicolás de Piérola #123 - Chiclayo</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Teléfono</h3>
+                            <p>+51 974 404 329</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div class="contact-details">
+                            <h3>Horario</h3>
+                            <p>Lunes a Viernes: 8:00 AM - 9:00 PM<br>Sábados: 9:00 AM - 2:00 PM<br>Domingos: Cerrado</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">WA</a>
+                    </div>
+                </div>
+                <div class="map">
+                    <p>📍 Aquí irá el mapa de ubicación</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Botica Luz</h3>
+                    <p>Tu salud es nuestra prioridad. Más de 20 años sirviendo a la comunidad con productos farmacéuticos de calidad y atención personalizada.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#">Venta de Medicamentos</a></li>
+                        <li><a href="#">Asesoramiento Farmacéutico</a></li>
+                        <li><a href="#">Control de Presión</a></li>
+                        <li><a href="#">Entrega a Domicilio</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025 Botica Luz. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navMenu = document.querySelector('nav ul');
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
