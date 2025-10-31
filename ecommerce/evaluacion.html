@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación E-commerce - Botica Luz</title>
+    <style>
+        :root {
+            --primary: #2c7fb8;
+            --secondary: #7fcdbb;
+            --accent: #edf8b1;
+            --dark: #253237;
+            --light: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+        }
+        
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: var(--dark);
+            margin: 20px 0 10px;
+            font-size: 1.4rem;
+        }
+        
+        .highlight {
+            background-color: var(--accent);
+            padding: 15px;
+            border-left: 4px solid var(--primary);
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .card {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 4px solid var(--secondary);
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin: 20px 0;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--secondary);
+        }
+        
+        .timeline-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: var(--dark);
+            color: white;
+            border-radius: 12px 12px 0 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background: #1d5f8a;
+        }
+        
+        @media (max-width: 768px) {
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Evaluación de E-commerce</h1>
+            <p class="subtitle">Botica Luz - Proyecto de Comercio Electrónico</p>
+            <a href="https://ati74794950.github.io/BOTICA-LUZ/" class="btn" target="_blank">Ver Sitio Web</a>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="section">
+            <h2>Viabilidad y Estrategia</h2>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Viabilidad</h3>
+                    <div class="highlight">
+                        <p>Sí hay espacio para Botica Luz en Internet. Existe una base de clientes local que valora la confianza y el trato personalizado, lo que puede ser un diferenciador clave frente a la competencia impersonal.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>Estrategia</h3>
+                    <p><strong>¿Qué hay que hacer?</strong> Mantener y mejorar la página web, añadiendo funcionalidades de e-commerce básico.</p>
+                    <p><strong>¿Cuándo hay que hacerlo?</strong> Inmediatamente, comenzando con la publicación de esta evaluación en el sitio.</p>
+                    <p><strong>¿Cuánto me va a costar?</strong> Bajo, usando GitHub Pages (gratuito). Posible migración a hosting de pago en el futuro.</p>
+                    <p><strong>¿Cuál va ser el retorno esperado?</strong> Mayor visibilidad, fidelización de clientes y eventual aumento en ventas.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Definición de Objetivos</h2>
+            <p><strong>¿Qué se quiere conseguir con su proyecto?</strong></p>
+            <ul>
+                <li>Crear una presencia digital accesible para la botica, facilitando que los clientes conozcan nuestros productos y servicios.</li>
+                <li>Ofrecer información clara sobre medicamentos, cuidados de salud y productos de cuidado personal.</li>
+                <li>Posicionar a Botica Luz como una opción confiable y cercana en el entorno digital.</li>
+            </ul>
+        </section>
+        
+        <section class="section">
+            <h2>Estudio del Entorno</h2>
+            <p><strong>¿Hay realmente un nicho de mercado para mi producto o servicio en Internet?</strong></p>
+            <div class="highlight">
+                <p>Sí. Aunque existen grandes cadenas de farmacias en línea, Botica Luz puede destacar por:</p>
+            </div>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Servicio personalizado</h3>
+                    <p>Confianza en la comunidad local con trato directo y humano.</p>
+                </div>
+                <div class="card">
+                    <h3>Asesoramiento profesional</h3>
+                    <p>Orientación farmacéutica personalizada para cada cliente.</p>
+                </div>
+                <div class="card">
+                    <h3>Productos accesibles</h3>
+                    <p>Entrega local y precios competitivos para la comunidad.</p>
+                </div>
+                <div class="card">
+                    <h3>Enfoque en bienestar</h3>
+                    <p>Cercanía y atención centrada en la salud integral.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Diagnóstico, Modelo de Negocio y Planes de Actuación</h2>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <h3>1. Diagnóstico</h3>
+                    <p><strong>Fortalezas:</strong> Confianza local, años de experiencia, servicio personalizado.</p>
+                    <p><strong>Debilidades:</strong> Poco conocimiento en herramientas digitales, limitaciones técnicas del hosting gratuito.</p>
+                    <p><strong>Oportunidades:</strong> Creciente demanda de compras en línea, especialmente en salud.</p>
+                    <p><strong>Amenazas:</strong> Competencia de grandes cadenas de farmacias digitales.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>2. Modelo de Negocio</h3>
+                    <p><strong>Modelo B2C (Business to Consumer):</strong> Venta directa al cliente final.</p>
+                    <p><strong>Fuentes de ingreso:</strong> Venta de medicamentos, productos de cuidado personal y vitaminas.</p>
+                    <p><strong>Propuesta de valor:</strong> Confianza, asesoramiento profesional y cercanía con la comunidad.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>3. Planes de Actuación</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-title">Corto plazo</div>
+                            <p>Mantener y actualizar la página web con nuevos productos. Promocionar la página en redes locales.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-title">Mediano plazo</div>
+                            <p>Incorporar un formulario de pedidos en línea. Evaluar opciones de hosting de pago.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-title">Largo plazo</div>
+                            <p>Implementar carrito de compras y pasarela de pagos. Desarrollar estrategia de marketing digital local.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Reflexión sobre Hosting y Dominio</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Hosting</h3>
+                    <p>Es el espacio en internet donde vive mi página web y se guardan todos sus archivos para que cualquiera pueda verla.</p>
+                    <h4>Ventajas:</h4>
+                    <ul>
+                        <li>No tengo que pagar nada</li>
+                        <li>Súper fácil de usar</li>
+                        <li>Puedo subir mis archivos rápido</li>
+                        <li>Mi página siempre está disponible</li>
+                        <li>Se ve bien en computadoras y celulares</li>
+                    </ul>
+                    <h4>Limitaciones:</h4>
+                    <ul>
+                        <li>No puedo hacer cosas más avanzadas como usar base de datos</li>
+                        <li>No puedo tener usuarios registrados</li>
+                        <li>El espacio es limitado</li>
+                        <li>Si quiero un dominio personalizado, tengo que comprarlo aparte</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Dominio</h3>
+                    <p>Es el nombre único que le pongo a mi sitio para que las personas puedan encontrarlo fácilmente, como su dirección en la red.</p>
+                    
+                    <h3>Importancia del hosting en el e-commerce</h3>
+                    <div class="highlight">
+                        <p>El hosting es muy importante en el e-commerce porque de él depende que una tienda en línea esté siempre disponible y funcione bien. Si el hosting es lento o se cae, los clientes pueden irse y no volver. Tener un buen hosting ayuda a que la página cargue rápido, sea segura y transmita confianza, lo cual es clave para que las personas se animen a comprar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Evaluación de Comercio Electrónico - Botica Luz</p>
+            <p>Desarrollado para el curso de E-commerce - 2025</p>
+        </div>
+    </footer>
+</body>
+</html>
